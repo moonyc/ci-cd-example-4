@@ -40,7 +40,8 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: dist-files
+          path: ~/download/dist-files/
       - name: Output contents
-        run: cd dist-files; ls
+        run: ls -R
       - name: Deploy
         run: echo "Deploying..."
